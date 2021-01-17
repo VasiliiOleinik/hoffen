@@ -229,12 +229,23 @@ select, input, textarea {
   -webkit-text-fill-color: transparent; }
 
 h1.title {
-  font-family: Montserrat;
   font-size: 48px;
   font-weight: 900;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #191919;
+  text-transform: uppercase;
+  margin-bottom: 36px; }
+
+h2.title {
+  font-size: 36px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
   letter-spacing: normal;
   text-align: left;
   color: #191919;
@@ -583,7 +594,22 @@ ul.simple-li li {
       letter-spacing: normal;
       text-align: left;
       color: #191919;
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Open Sans", sans-serif;
       margin-bottom: 36px; }
     .header__content .link-btn-gradient {
       margin-right: auto; }
+
+.main__welcome {
+  margin-top: 80px; }
+  .main__welcome .title {
+    margin-right: auto; }
+  .main__welcome p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: left;
+    margin-bottom: 45px; }

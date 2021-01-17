@@ -2,4 +2,15 @@ extends blocks/_layout
 append content
 	main.main
 		.box
-			span.text-gradient gsaghsdhdh
+			section.main__welcome.d-flex.flex-column
+				h2.title.text-gradient.d-flex Добро пожаловать
+				p На оконном рынке фирма «Hoffen» известна уже более 10 лет. За столько лет своего существования успела завоевать благодарность 
+					| и доверие огромнейшего количества покупателей нашей страны. Опытные и высококвалифицированные специалисты выполнят любые задачи 
+					| на самом высшем уровне и в самые краткие сроки.
+				.main__welcome-services.d-flex
+					.welcome-services-info
+						h3.title.text-gradient Мы предлагаем услуги по установке и монтажу:
+						
+					.welcome-services-img
+						img(src="img/img-1.jpg", alt="")
+
