@@ -275,6 +275,18 @@ h1.title {
     -webkit-box-shadow: 6.5px 2.3px 16px 0 rgba(0, 180, 255, 0.33);
             box-shadow: 6.5px 2.3px 16px 0 rgba(0, 180, 255, 0.33); }
 
+ul.simple-li li {
+  position: relative;
+  padding-left: 40px; }
+  ul.simple-li li::before {
+    content: url("../img/list-item.png");
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    position: absolute;
+    left: 0; }
+
 .footer {
   padding: 100px 0px;
   background-color: #191919; }
@@ -283,9 +295,14 @@ h1.title {
             border-radius: 30px;
     background-color: #ffffff;
     width: 370px;
-    height: 446px;
+    height: 445px;
     position: relative;
-    margin-right: 30px; }
+    margin-right: 30px;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
+    .footer__map img {
+      z-index: 90; }
     .footer__map .link-btn-gradient {
       position: absolute;
       left: 50%;
@@ -299,7 +316,15 @@ h1.title {
     .footer__map-header {
       text-align: center;
       padding: 30px 0px;
-      z-index: 100; }
+      z-index: 100;
+      font-size: 18px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: center;
+      color: #191919; }
     .footer__map::after {
       content: "";
       opacity: 0.5;
@@ -394,7 +419,9 @@ h1.title {
         color: #00a2ff; }
 
 .header {
-  background-color: #e8e8e8;
+  background-image: url("../img/header-bg.jpg");
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
   padding: 10px 0px 120px 0px; }
   .header__logo {
     margin-right: 100px; }
@@ -436,7 +463,13 @@ h1.title {
       line-height: 1.85;
       letter-spacing: normal;
       text-align: left;
-      color: #505050; }
+      color: #505050;
+      -webkit-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      .header__search input:focus {
+        -webkit-box-shadow: 0px 2.3px 16px 0 rgba(0, 180, 255, 0.33);
+                box-shadow: 0px 2.3px 16px 0 rgba(0, 180, 255, 0.33); }
     .header__search button {
       position: absolute;
       right: 20px;

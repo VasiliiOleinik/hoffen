@@ -183,3 +183,14 @@ h1.title
     background-size: 200% auto
     background-position: right center
     box-shadow: 6.5px 2.3px 16px 0 rgba(0, 180, 255, 0.33)
+
+ul.simple-li
+  li
+    position: relative
+    padding-left: 40px
+    &::before
+      content: url('../img/list-item.png')
+      top: 50%
+      transform: translateY(-50%)
+      position: absolute
+      left: 0
