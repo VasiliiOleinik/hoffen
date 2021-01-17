@@ -1,0 +1,134 @@
+.header
+  background-color: $grey
+  padding: 10px 0px 120px 0px
+  &__logo
+    margin-right: 100px
+  &__mail
+    margin-right: 96px
+    a
+      font-weight: bold
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.5
+      letter-spacing: normal
+      color: #000000
+  &__info
+    margin-right: 20px
+    font-size: 13px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.38
+    letter-spacing: normal
+    text-align: left
+    color: #000000
+    & .header-adress
+      margin-right: 20px
+  &__search
+    position: relative
+    margin-right: 20px
+    input
+      width: 260px
+      height: 49px
+      padding: 16px 45px 15px 30px
+      border-radius: 24.5px
+      background-color: #ffffff
+      font-size: 13px
+      font-weight: 300
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.85
+      letter-spacing: normal
+      text-align: left
+      color: #505050
+    button
+      position: absolute
+      right: 20px
+      top: 48%
+      transform: translateY(-50%)
+  &__contacts
+    padding: 13px 15px 12px 14px
+    opacity: 0.7
+    background-image: linear-gradient(to right, $blue, $purple)
+    position: relative
+    top: -10px
+    border-radius: 0px 0px 10px 10px
+    a
+      font-size: 14px
+      font-weight: bold
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.29
+      letter-spacing: normal
+      text-align: left
+      color: #ffffff
+    &-bg
+      position: absolute
+      opacity: 0.45
+      width: 80%
+      height: 10px
+      top: 100%
+      left: 50%
+      transform: translateX(-50%)
+      background-image: linear-gradient(to right, $blue, $purple)
+      border-radius: 0px 0px 10px 10px
+      &::before
+        content: ''
+        position: absolute
+        top: 10px
+        height: 7px
+        opacity: 0.35
+        width: 70%
+        left: 50%
+        transform: translateX(-50%)
+        background-image: linear-gradient(to right, $blue, $purple)
+        border-radius: 0px 0px 10px 10px
+      &::after
+        content: ''
+        position: absolute
+        top: 17px
+        height: 4px
+        opacity: 0.25
+        width: 50%
+        left: 50%
+        transform: translateX(-50%)
+        background-image: linear-gradient(to right, $blue, $purple)
+        border-radius: 0px 0px 10px 10px
+  &__nav
+    margin: 10px 0px 50px 0px
+    &-list
+      justify-content: space-between
+      width: 100%
+    &-li
+      margin-right: 7.5px
+      &:last-child
+        margin-right: 0px
+    &-link
+      font-size: 11px
+      font-weight: 900
+      font-stretch: normal
+      font-style: normal
+      line-height: 2.18
+      letter-spacing: normal
+      text-align: left
+      color: #505050
+      text-transform: uppercase
+      &:hover,
+      &.active
+        color: $blue
+  &__content
+    max-width: 565px
+    width: 100%
+    p
+      font-size: 15px
+      font-weight: 400
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.6
+      letter-spacing: normal
+      text-align: left
+      color: #191919
+      font-family: 'Open Sans', sans-serif
+      margin-bottom: 36px
+    & .link-btn-gradient
+      margin-right: auto
