@@ -1,6 +1,7 @@
 .main
   &__welcome
     margin-top: 80px
+    margin-bottom: 75px
     & .title
       margin-right: auto
     & p
@@ -13,3 +14,212 @@
       letter-spacing: normal
       text-align: left
       margin-bottom: 45px
+    & .welcome-services-info
+      margin-right: 20px
+      & .title
+        margin-bottom: 35px
+  &__price
+    padding: 45px 0px 110px 0px
+    & .title
+      width: 100%
+      text-align: center
+      margin-bottom: 42px
+    &-contacts
+      max-width: 570px
+      margin-right: 30px
+      width: 100%
+      & .top-block
+        margin-bottom: 122px
+        p
+          text-align: center
+          margin-bottom: 32px
+          font-size: 18px
+          font-weight: 900
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.2
+          letter-spacing: normal
+          text-align: center
+          color: #191919
+        a
+          color: #505050
+          &:hover
+            color: $blue
+      & .bottom-block
+        & .link-btn-outer
+          margin-bottom: 30px
+          &:first-child
+            margin-right: 30px
+    & .price-form
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        right: -20px
+        bottom: -20px
+        border-radius: 30px
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(to right, $blue, $purple)
+        z-index: 10
+    & .form-bg
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      z-index: 10
+      &::before
+        content: ''
+        position: absolute
+        right: -40px
+        bottom: -40px
+        border-radius: 30px
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(to right, $blue, $purple)
+        opacity: .5
+      &::after
+        content: ''
+        position: absolute
+        right: -60px
+        bottom: -60px
+        border-radius: 30px
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(to right, $blue, $purple)
+        opacity: .25
+    & .form-content
+      position: relative
+      z-index: 100
+      border-radius: 30px
+      background-color: #ffffff
+      padding: 10px 70px 45px 70px
+      width: 470px
+      height: 446px
+      p
+        font-size: 18px
+        font-weight: 900
+        font-stretch: normal
+        font-style: normal
+        line-height: 2.67
+        letter-spacing: normal
+        text-align: center
+        color: #191919
+        margin-bottom: 18px
+      .gradient-input
+        width: 100%
+        height: 50px
+        border-radius: 50px
+        margin-bottom: 20px
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          top: -2px
+          bottom: -2px
+          left: -2px
+          right: -2px
+          background: $grey
+          border-radius: 34px
+          z-index: -1
+        &.isFocus::after
+          background: linear-gradient(35deg,  $blue, $purple)
+          
+      .gradient-textarea
+        width: 100%
+        height: 115px
+        border-radius: 15px
+        margin-bottom: 20px
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          top: -2px
+          bottom: -2px
+          left: -2px
+          right: -2px
+          background: linear-gradient(35deg,  $blue, $purple)
+          border-radius: 34px
+          z-index: -1
+          background: $grey
+        &.isFocus::after
+          background: linear-gradient(35deg,  $blue, $purple)
+      input
+        border-radius: 50px
+        width: 100%
+        height: 100%
+        padding: 0px 20px
+        font-family: $openSans
+        font-size: 13px
+        font-weight: 300
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.2
+        letter-spacing: normal
+        text-align: left
+        position: relative
+        z-index: 100
+        background: #ffffff
+      textarea
+        padding: 20px
+        width: 100%
+        height: 115px
+        resize: none
+        font-family: $openSans
+        font-size: 13px
+        font-weight: 300
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.2
+        letter-spacing: normal
+        text-align: left
+        position: relative
+        z-index: 100
+        background: #ffffff
+        border-radius: 32px
+  &__choose
+    position: relative
+    margin-bottom: 131px
+    &-outer
+      width: 280px
+      height: 280px
+      border-radius: 50%
+      border: solid 2px #e8e8e8
+      padding: 19px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: 100px
+        height: 50px
+        position: absolute
+        background: #fff
+        top: -5px
+        left: 50%
+        transform: translateX(-50%)
+        border-radius: 100px
+      &::after
+        content: ''
+        position: absolute
+        width: 100px
+        height: 50px
+        position: absolute
+        background: #fff
+        bottom: -5px
+        left: 50%
+        transform: translateX(-50%)
+        border-radius: 100px
+    &-inner
+      width: 243px
+      height: 243px
+      border-radius: 50%
+      background: #f8f8f8
+      position: relative
+      z-index: 10
+    &-core
+      width: 209px
+      height: 209px
+      border-radius: 50%
+      background: $grey
+        

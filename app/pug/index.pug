@@ -1,16 +1,105 @@
 extends blocks/_layout
 append content
 	main.main
-		.box
-			section.main__welcome.d-flex.flex-column
+		.box.flex-column
+			section.main__welcome.d-flex.flex-column.w-100
 				h2.title.text-gradient.d-flex Добро пожаловать
 				p На оконном рынке фирма «Hoffen» известна уже более 10 лет. За столько лет своего существования успела завоевать благодарность 
 					| и доверие огромнейшего количества покупателей нашей страны. Опытные и высококвалифицированные специалисты выполнят любые задачи 
 					| на самом высшем уровне и в самые краткие сроки.
-				.main__welcome-services.d-flex
+				.main__welcome-services.d-flex.space-between
 					.welcome-services-info
 						h3.title.text-gradient Мы предлагаем услуги по установке и монтажу:
-						
+						ul.check.d-flex.flex-column
+							li Подоконников;
+							li Откосов;
+							li Жалюзи;
+							li Москитных сеток для окон и дверей;
+							li Рольставней для окон;
+							li Оцинкованных и алюминиевых отливов;
+							li А также выполним террасный настил.
 					.welcome-services-img
-						img(src="img/img-1.jpg", alt="")
+						img(src="img/img-1.jpg" alt="")
+			section.main__choose.d-flex.ai-center.justify-center.w-100
+				.main__choose-outer.d-flex.ai-center.justify-center
+					.main__choose-inner.d-flex.ai-center.justify-center
+						.main__choose-core.d-flex.justify-center.ai-start
+		.gray-bg
 
+			section.main__price
+				.box.d-flex.flex-wrap
+					h2.title.text-gradient УЗНАЙТЕ  СТОИМОСТЬ  ПРЯМО СЕЙЧАС!
+					.main__price-contacts
+						.top-block.d-flex.flex-wrap.ai-center.justify-center
+							p.text-gradient.w-100 Наши контакты
+							.footer__data-info-item.d-flex.ai-center
+								img(src="img/phone-ico.png" alt="ico")
+								.footer__data-info-text.d-flex.flex-column
+									a(href="tel:+74993981114") +7 (499) 398-11-14
+									a(href="tel:+79264220615") +7 (926) 422-06-15
+									a(href="tel:+79266582922") +7 (926) 658-29-22
+							.footer__data-info-item.d-flex.ai-center
+								img(src="img/mail-ico.png" alt="ico")
+								.footer__data-info-text.d-flex.flex-column
+									a(href="mailto:mail@hoffen.ru") mail@hoffen.ru
+						.bottom-block.d-flex.flex-wrap.ai-center.justify-center
+							a(href="/" class="link-btn-outer")
+								span.outer-bg 
+									span.text-gradient Способы оплаты
+							a(href="/" class="link-btn-outer")
+								span.outer-bg 
+									span.text-gradient Сертификаты
+							a(href="/" class="link-btn-outer")
+								span.outer-bg 
+									span.text-gradient Условия доставки
+					.main__price-form
+						form(action="" method="" class="price-form")
+							.form-bg
+							.form-content.d-flex.flex-column
+								p.text-gradient Оставьте Заявку
+								.gradient-input
+									input(type="text" name="DATA[NAME]" placeholder="Ваше имя")
+								.gradient-input
+									input(type="text" name="DATA[EMAIL]" placeholder="Ваш email")
+								.gradient-textarea
+									textarea(name="DATA[COMMENT]" placeholder="Сообщение")
+								button(type="submit" class="form-btn") Отправить
+		.gray-bg
+			section.main__price
+				.box.d-flex.flex-wrap
+					h2.title.text-gradient УЗНАЙТЕ  СТОИМОСТЬ  ПРЯМО СЕЙЧАС!
+					.main__price-contacts
+						.top-block.d-flex.flex-wrap.ai-center.justify-center
+							p.text-gradient.w-100 Наши контакты
+							.footer__data-info-item.d-flex.ai-center
+								img(src="img/phone-ico.png" alt="ico")
+								.footer__data-info-text.d-flex.flex-column
+									a(href="tel:+74993981114") +7 (499) 398-11-14
+									a(href="tel:+79264220615") +7 (926) 422-06-15
+									a(href="tel:+79266582922") +7 (926) 658-29-22
+							.footer__data-info-item.d-flex.ai-center
+								img(src="img/mail-ico.png" alt="ico")
+								.footer__data-info-text.d-flex.flex-column
+									a(href="mailto:mail@hoffen.ru") mail@hoffen.ru
+						.bottom-block.d-flex.flex-wrap.ai-center.justify-center
+							a(href="/" class="link-btn-outer")
+								span.outer-bg 
+									span.text-gradient Способы оплаты
+							a(href="/" class="link-btn-outer")
+								span.outer-bg 
+									span.text-gradient Сертификаты
+							a(href="/" class="link-btn-outer")
+								span.outer-bg 
+									span.text-gradient Условия доставки
+					.main__price-form
+						form(action="" method="" class="price-form")
+							.form-bg
+							.form-content.d-flex.flex-column
+								p.text-gradient Оставьте Заявку
+								.gradient-input
+									input(type="text" name="DATA[NAME]" placeholder="Ваше имя")
+								.gradient-input
+									input(type="text" name="DATA[EMAIL]" placeholder="Ваш email")
+								.gradient-textarea
+									textarea(name="DATA[COMMENT]" placeholder="Сообщение")
+								button(type="submit" class="form-btn") Отправить

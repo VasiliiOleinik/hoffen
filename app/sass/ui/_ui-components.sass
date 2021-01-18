@@ -173,7 +173,6 @@ h2.title
 
 .link-btn-gradient
   padding: 20px 63px
-  border-radius: 24.5px
   box-shadow: 6.5px 11.3px 16px 0 rgba(0, 180, 255, 0.33)
   color: #ffffff
   background-image: linear-gradient(to right, $blue, $purple)
@@ -204,3 +203,79 @@ ul.simple-li
       transform: translateY(-50%)
       position: absolute
       left: 0
+ul.check
+  li 
+    margin-bottom: 10px
+    font-family: $openSans
+    font-size: 15px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.2
+    letter-spacing: normal
+    text-align: left
+    color: #191919
+  
+.gray-bg
+  background-color: $grey
+
+.form-btn
+  width: 100%
+  height: 50px
+  border-radius: 50px
+  background-image: linear-gradient(to right, $blue, $purple)
+  font-size: 13px
+  font-weight: bold
+  font-stretch: normal
+  font-style: normal
+  line-height: 1.2
+  letter-spacing: normal
+  text-align: center
+  text-transform: uppercase
+  color: #ffffff
+  transition: 0.5s
+  background-size: 100% auto
+  &:hover
+    background-size: 200% auto
+    background-position: right center
+    box-shadow: 6.5px 2.3px 16px 0 rgba(0, 180, 255, 0.33)
+
+
+.link-btn-outer
+  position: relative
+  // background-image: linear-gradient(to right, $blue, $purple)
+  border-radius: 50px 
+  width: 270px
+  .outer-bg
+    position: relative
+    z-index: 2
+    background: $grey
+    width: 100%
+    height: 100%
+    font-size: 13px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.2
+    letter-spacing: normal
+    text-align: center
+    border-radius: 50px
+    transition: 0.5s
+    background-size: 100% auto
+    padding: 20px 63px
+    display: inline-block
+  &::after
+    content: ''
+    position: absolute
+    top: -2px
+    bottom: -2px
+    left: -2px
+    right: -2px
+    border-radius: 50px
+    z-index: 1
+    background: linear-gradient(35deg,  $blue, $purple)
+  &:hover
+    background-size: 200% auto
+    background-position: right center
+    box-shadow: 6.5px 11.3px 16px 0 rgba(0, 180, 255, 0.33)
+    color: #ffffff
