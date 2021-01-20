@@ -1,7 +1,6 @@
 .main
   &__welcome
     margin-top: 80px
-    margin-bottom: 75px
     & .title
       margin-right: auto
     & p
@@ -125,7 +124,7 @@
           z-index: -1
         &.isFocus::after
           background: linear-gradient(35deg,  $blue, $purple)
-          
+
       .gradient-textarea
         width: 100%
         height: 115px
@@ -180,7 +179,7 @@
         border-radius: 32px
   &__choose
     position: relative
-    margin-bottom: 131px
+    padding: 155px 0px
     &-outer
       width: 280px
       height: 280px
@@ -188,6 +187,185 @@
       border: solid 2px #e8e8e8
       padding: 19px
       position: relative
+      & .choose-item
+        position: absolute
+        &_wrap
+          width: 293px
+          height: 102px
+          background-color: #f8f8f8
+          padding: 10px
+          flex-shrink: 0
+          border-radius: 10px 50px 50px 10px
+          position: relative
+          z-index: 100
+          transition: all .2s ease-in-out
+        &:hover
+          .choose-item_wrap
+            box-shadow: 0 0 10px 0px rgba(80,80,80, .5)
+        &_left
+          margin-right: 20px
+          width: calc(100% - 102px)
+        &_right
+          width: 82px
+          height: 82px
+          border-radius: 50%
+          background-color: #e8e8e8
+        &_guide
+          width: 58px
+          height: 2px
+          background-color: #e8e8e8
+          position: absolute
+          z-index: 10
+          &::after
+            content: ''
+            position: absolute
+            width: 11px
+            height: 11px
+            background-color: #e8e8e8
+            border-radius: 50%
+          &::before
+            content: ''
+            position: absolute
+            width: 21px
+            height: 21px
+            background-color: #f8f8f8
+            border-radius: 50%
+        &:nth-of-type(1)
+          left: calc(-100% - 15px)
+          top: -65px
+          & .choose-item_guide
+            right: -32px
+            top: 100px
+            transform: rotate(45deg)
+            &::after
+              right: -5px
+              top: -5px
+            &::before
+              right: -10px
+              top: -10px
+        &:nth-of-type(2)
+          left: calc(-100% - 67px)
+          top: 47px
+          & .choose-item_guide
+            right: -50px
+            top: 85px
+            transform: rotate(28deg)
+            &::after
+              right: -5px
+              top: -5px
+            &::before
+              right: -10px
+              top: -10px
+        &:nth-of-type(3)
+          left: calc(-100% - 53px)
+          top: 169px
+          & .choose-item_guide
+            right: -56px
+            top: 45px
+            transform: rotate(0deg)
+            &::after
+              right: -5px
+              top: -5px
+            &::before
+              right: -10px
+              top: -10px
+        &:nth-of-type(4)
+          right: calc(-100% - 53px)
+          top: 0
+          & .choose-item_guide
+            left: -45px
+            top: 75px
+            transform: rotate(-32deg)
+            &::before
+              left: -12px
+              top: -10px
+            &::after
+              top: -5px
+              left: -7px
+          & .choose-item_wrap
+            flex-direction: row-reverse
+            border-radius: 50px 10px 10px 50px
+            & .choose-item_left 
+              margin-right: 0px
+              margin-left: 20px
+            & .choose-title
+              text-align: left
+              margin-left: initial
+              margin-right: auto
+            & .choose-text
+              text-align: left
+        &:nth-of-type(5)
+          right: calc(-100% - 70px)
+          top: 122px
+          & .choose-item_guide
+            left: -55px
+            top: 50px
+            transform: rotate(-15deg)
+            &::before
+              left: -12px
+              top: -10px
+            &::after
+              top: -5px
+              left: -7px
+          & .choose-item_wrap
+            flex-direction: row-reverse
+            border-radius: 50px 10px 10px 50px
+            & .choose-item_left 
+              margin-right: 0px
+              margin-left: 20px
+            & .choose-title
+              text-align: left
+              margin-left: initial
+              margin-right: auto
+            & .choose-text
+              text-align: left
+        &:nth-of-type(6)
+          right: calc(-100% - 15px)
+          top: 244px
+          & .choose-item_guide
+            left: -50px
+            top: 18px
+            transform: rotate(40deg)
+            &::before
+              left: -12px
+              top: -10px
+            &::after
+              top: -5px
+              left: -7px
+          & .choose-item_wrap
+            flex-direction: row-reverse
+            border-radius: 50px 10px 10px 50px
+            & .choose-item_left 
+              margin-right: 0px
+              margin-left: 20px
+            & .choose-title
+              text-align: left
+              margin-left: initial
+              margin-right: auto
+            & .choose-text
+              text-align: left
+        & .choose-title
+          max-width: 130px
+          font-size: 12px
+          font-weight: 900
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.2
+          letter-spacing: normal
+          text-align: right
+          margin-left: auto
+          margin-bottom: 15px
+        & .choose-text
+          font-size: 11px
+          font-weight: 900
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.2
+          letter-spacing: normal
+          text-align: right
+          color: #505050
+          & span
+            color: $blue
       &::before
         content: ''
         position: absolute
@@ -222,4 +400,132 @@
       height: 209px
       border-radius: 50%
       background: $grey
-        
+      div
+        padding-top: 35px
+        text-align: center
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.2
+        letter-spacing: normal
+        text-align: center
+        color: #191919
+        font-weight: 900
+        & .ask
+          font-size: 48px
+        & .text
+          font-size: 16px
+          line-height: 1.5
+          text-transform: uppercase
+  &__advantage
+    padding: 100px 0px
+    & h2
+      text-align: center
+      margin-bottom: 0px
+    &-wrap
+      margin-top: 45px
+    & .advantage-item
+      width: 208px
+      height: 315px
+      border-radius: 30px
+      box-shadow: 5.5px 9.5px 13px 0 rgba(0, 0, 0, 0.26)
+      background-color: #e8e8e8
+      margin-bottom: 32px
+      margin-right: 32px
+      &__image
+        width: 100%
+        height: 120px
+        margin-bottom: 20px
+        background: red
+      & .advantage-title
+        font-size: 14px
+        font-weight: 900
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.2
+        letter-spacing: normal
+        text-align: center
+        color: #505050
+        text-transform: uppercase
+        margin-bottom: 10px
+        padding: 0px 10px
+      & .advantage-text
+        font-family: $openSans
+        font-size: 15px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.4
+        letter-spacing: normal
+        text-align: center
+        color: #505050
+        padding: 0px 10px
+      &:nth-of-type(5n)
+        margin-right: 0px
+  &__completed
+    margin-bottom: 100px
+    & h2
+      text-align: center
+      margin-bottom: 50px
+      position: relative
+    & .completed-prev-arrow,
+    & .completed-next-arrow
+      position: absolute
+      left: 20px
+      top: calc(50% + 45px)
+      transform: translateY(-50%)
+      cursor: pointer
+    & .completed-next-arrow
+      right: 20px
+      left: initial
+    & .completed-item
+      position: relative
+      &:hover
+        & .completed-item_hover
+          opacity: 1
+          transition: opacity .2s ease-in-out
+      &_hover
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        transition: opacity .2s ease-in-out
+        background-image: linear-gradient(to right, #00a2ff7a, #7e00ff75)
+        & a
+          width: 170px
+          height: 50px
+          color: #ffffff
+          border: 1px solid #ffffff
+          border-radius: 50px
+          &:hover
+            box-shadow: 0px 0px 10px 5px rgba(0, 180, 255, 0.33)
+  &__demands
+    padding-bottom: 100px
+    & h2 + p
+      margin-bottom: 45px
+    & h3
+      margin-bottom: 30px
+      text-transform: uppercase
+      margin-right: auto
+    &-info
+      margin-bottom: 45px
+      ul.check
+        max-width: 645px
+        width: 100%
+        margin-right: 30px
+        li
+          font-family: $openSans
+          font-size: 15px
+          font-weight: normal
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.6
+          letter-spacing: normal
+          text-align: left
+          color: #191919
+      & .demands-image
+        max-width: 470px
+        width: 100%
+        img
+          margin-bottom: 30px
