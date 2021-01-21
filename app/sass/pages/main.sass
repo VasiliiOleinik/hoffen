@@ -4,7 +4,7 @@
     & .title
       margin-right: auto
     & p
-      font-family: $openSans
+      font-family: 'Open Sans', sans-serif
       font-size: 15px
       font-weight: 300
       font-stretch: normal
@@ -149,7 +149,7 @@
         width: 100%
         height: 100%
         padding: 0px 20px
-        font-family: $openSans
+        font-family: 'Open Sans', sans-serif
         font-size: 13px
         font-weight: 300
         font-stretch: normal
@@ -165,7 +165,7 @@
         width: 100%
         height: 115px
         resize: none
-        font-family: $openSans
+        font-family: 'Open Sans', sans-serif
         font-size: 13px
         font-weight: 300
         font-stretch: normal
@@ -449,7 +449,7 @@
         margin-bottom: 10px
         padding: 0px 10px
       & .advantage-text
-        font-family: $openSans
+        font-family: 'Open Sans', sans-serif
         font-size: 15px
         font-weight: normal
         font-stretch: normal
@@ -515,7 +515,7 @@
         width: 100%
         margin-right: 30px
         li
-          font-family: $openSans
+          font-family: 'Open Sans', sans-serif
           font-size: 15px
           font-weight: normal
           font-stretch: normal
@@ -529,3 +529,130 @@
         width: 100%
         img
           margin-bottom: 30px
+  &__reviews
+    margin-bottom: 130px
+    & h2
+      text-align: center
+      margin-bottom: 50px
+    & .reviews-for
+      max-width: 800px
+      padding-right: 30px
+      width: 100%
+      height: 445px
+      overflow: auto
+    & .review-message
+      position: absolute
+      right: 20px
+      top: 20px
+    & .review-item
+      width: 100%
+      height: 196px
+      border-radius: 30px
+      box-shadow: 5.5px 9.5px 13px 0 rgba(0, 0, 0, 0.26)
+      background-color: #e8e8e8
+      margin-bottom: 30px
+      position: relative
+      cursor: pointer
+      &_img
+        width: 170px
+        flex-shrink: 0
+      &_content
+        width: calc(100% - 170px)
+        padding: 20px 20px
+      &_header
+        margin-bottom: 25px
+        &-top
+          margin-bottom: 10px
+        & .review-name
+          font-size: 11px
+          font-weight: 900
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.2
+          letter-spacing: normal
+          text-align: left
+          color: #505050
+          margin-right: 20px
+          text-transform: uppercase
+          margin-bottom: 0px
+        & .review-date,
+        & .review-location
+          font-size: 11px
+          font-weight: 600
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.2
+          letter-spacing: normal
+          text-align: left
+          color: #a0a0a0
+          margin-right: 20px
+      &_body
+        font-family: 'Open Sans', sans-serif
+        font-size: 14px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.6
+        letter-spacing: normal
+        text-align: left
+        color: #505050    
+      &:hover   
+        & .review-item_body *,
+        & .review-name,
+        & .review-date,
+        & .review-location
+          color: #ffffff 
+    & .reviews-nav
+      padding-left: 65px
+      & .all-reviews
+        width: 100%
+        & .outer-bg
+          background: #ffffff
+          text-transform: uppercase
+      & .review-nav_item
+        width: 100%
+        height: 108px
+        padding: 20px 30px
+        border-radius: 30px
+        box-shadow: 5.5px 9.5px 13px 0 rgba(0, 0, 0, 0.26)
+        background-color: #e8e8e8
+        margin-bottom: 20px
+        cursor: pointer
+        transition: all .2s ease-in-out
+        & img
+          width: 70px
+          height: 70px
+          border-radius: 50%
+          object-fit: cover
+          margin-right: 30px
+        & .review-name
+          font-size: 11px
+          font-weight: 900
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.64
+          letter-spacing: normal
+          text-align: left
+          color: #505050
+          text-transform: uppercase
+          margin-bottom: 0px
+          transition: all .2s ease-in-out
+        & .review-date
+          font-size: 11px
+          font-weight: 600
+          font-stretch: normal
+          font-style: normal
+          line-height: 2.18
+          letter-spacing: normal
+          text-align: left
+          color: #a0a0a0
+          margin-bottom: 0px
+          transition: all .2s ease-in-out
+        &:hover,
+        &.active
+          background-image: linear-gradient(to right, #2f66b9, #813ca4)
+          transition: all .2s ease-in-out
+          & .review-name,
+          & .review-date
+            color: #ffffff
+            transition: all .2s ease-in-out
