@@ -215,7 +215,12 @@ ul.check
     letter-spacing: normal
     text-align: left
     color: #191919
-  
+    position: relative
+    padding-left: 10px
+    &::before
+      content: url('../img/check.png')
+      position: relative
+      left: -5px
 .gray-bg
   background-color: $grey
 
