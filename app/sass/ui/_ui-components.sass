@@ -136,17 +136,38 @@ select, input, textarea
 
 .m0-auto
   margin: 0 auto
+.mr-auto
+  margin-right: auto
 
-.text-gradient 
-    background: $blue
-    background: -webkit-gradient(linear, left top, right top, from($blue), to ($purple))
-    background: -webkit-linear-gradient(left,$blue 0%,$purple 100%)
-    background: -o-linear-gradient(left, $blue 0%, $purple 100%)
-    background: linear-gradient(to right, $blue 0%, $purple 100%)
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue, endColorstr=$purple, GradientType=1 )
-    display: inline-block
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
+.ml-auto
+  margin-left: auto
+
+.text-gradient
+  background: $blue
+  background: -webkit-gradient(linear, left top, right top, from($blue), to ($purple))
+  background: -webkit-linear-gradient(left,$blue 0%,$purple 100%)
+  background: -o-linear-gradient(left, $blue 0%, $purple 100%)
+  background: linear-gradient(to right, $blue 0%, $purple 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue, endColorstr=$purple, GradientType=1 )
+  display: inline-block
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+span.title
+  font-size: 36px
+  font-weight: 900
+  font-stretch: normal
+  font-style: normal
+  line-height: 1.2
+  letter-spacing: normal
+  text-align: left
+  color: #191919
+  text-transform: uppercase
+  margin-bottom: 36px
+
+@media(max-width: 767px)
+  span.title
+    font-size: 24px
 
 h1.title
   font-size: 48px
@@ -204,7 +225,7 @@ ul.simple-li
       position: absolute
       left: 0
 ul.check
-  li 
+  li
     margin-bottom: 10px
     font-family: 'Open Sans', sans-serif
     font-size: 15px
@@ -245,11 +266,10 @@ ul.check
     background-position: right center
     box-shadow: 6.5px 2.3px 16px 0 rgba(0, 180, 255, 0.33)
 
-
 .link-btn-outer
   position: relative
   // background-image: linear-gradient(to right, $blue, $purple)
-  border-radius: 50px 
+  border-radius: 50px
   width: 270px
   .outer-bg
     position: relative
@@ -278,7 +298,7 @@ ul.check
     right: -2px
     border-radius: 50px
     z-index: 1
-    background: linear-gradient(35deg,  $blue, $purple)
+    background: linear-gradient(35deg, $blue, $purple)
   &:hover
     background-size: 200% auto
     background-position: right center
@@ -296,17 +316,16 @@ p
   text-align: left
   color: #191919
 
-
-::-webkit-scrollbar 
-    width: 5px 
-    height: 8px 
-    background-color: transparent
+::-webkit-scrollbar
+  width: 5px
+  height: 8px
+  background-color: transparent
     /* ползунок скроллбара */
 ::-webkit-scrollbar-thumb
   border-radius: 2.5px
   background-color: #e8e8e8
 ::-webkit-scrollbar-thumb:hover
-    background-color: #9e9e9e
+  background-color: #9e9e9e
 
 .hover-box
   position: relative
@@ -362,9 +381,10 @@ p
   border-radius: 30px
   box-shadow: 8.4px 4px 14.6px 1.4px rgba(0, 0, 0, 0.1)
   background-image: linear-gradient(to right, rgba(0,161,255, .15), rgba(126,0,255, .15))
-  position: absolute
-  left: 0
-  top: 0
+  flex-shrink: 0
+  // position: absolute
+  // left: 0
+  // top: 0
   & .left-nav-title
     margin-bottom: 24px
     font-size: 12px
@@ -415,9 +435,10 @@ p
         &::before
           color: $blue
 .main-body
-  margin-left: 300px
+  // margin-left: 300px
   padding-top: 20px
 .table
+  max-width: 870px
   width: 100%
   &-head
     width: 100%
@@ -434,6 +455,19 @@ p
     color: #ffffff
     text-transform: uppercase
     margin-bottom: 3px
+  &-subheader
+    width: 100%
+    margin-bottom: 3px
+    background-color: #505050
+    font-size: 15px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.6
+    letter-spacing: normal
+    text-align: left
+    color: #ffffff
+    height: 50px
   &-header
     & .table-cell
       background-color: #505050
@@ -467,9 +501,13 @@ p
       margin-right: 0px
     &.small
       width: 50px
+    &.small-middle
+      width: 100px
     &.middle
       width: 161px
-    
+    &.big
+      width: 360px
+
 .colorful-btn
   padding: 20px 40px
   font-size: 11px
@@ -486,16 +524,372 @@ p
   border-radius: 50px
   box-shadow: 8.4px 10px 14.6px 1.4px rgba(0, 180, 255, 0.33)
 
-
 .mobile-left-nav-btn
   display: none
   position: absolute
   width: 70px
   height: 70px
-  -webkit-border-radius: 0px 50px 50px 0px
-  border-radius: 0px 50px 50px 0px
-  background: red
+
+.text-section
+  & ul
+    & li
+      margin-bottom: 10px
+      font-family: 'Open Sans', sans-serif
+      font-size: 15px
+      font-weight: normal
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.2
+      letter-spacing: normal
+      text-align: left
+      color: #191919
+      position: relative
+      padding-left: 10px
+      &::before
+        content: url('../img/check.png')
+        position: relative
+        left: -5px
+  & p
+    font-size: 15px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.6
+    letter-spacing: normal
+    text-align: left
+    color: #191919
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6
+    background: -webkit-gradient(linear, left top, right top, from($blue), to ($purple))
+    background: -webkit-linear-gradient(left,$blue 0%,$purple 100%)
+    background: -o-linear-gradient(left, $blue 0%, $purple 100%)
+    background: linear-gradient(to right, $blue 0%, $purple 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue, endColorstr=$purple, GradientType=1 )
+    display: inline-block
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: 900
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.2
+    letter-spacing: normal
+    text-align: left
+    color: #191919
+    text-transform: uppercase
+
+.main__reviews .comments
+  overflow: initial
+
+.main__reviews .comment-reply > a
+  background-image: url(../img/email-color.png)
+  background-position: center center
+  background-size: 60%
+  background-repeat: no-repeat
+  width: 38px
+  height: 34px
+  padding: 5px
+  border: 1px solid #a0a0a0
+  transition: all .2s ease-in-out
+
+.ticket-comment
+  position: relative
+  &:hover
+    & .comment-reply > a
+      background-image: url(../img/email-white.png)
+      border: 1px solid #ffffff
+
+.comment-form
+  padding: 37px 40px 40px
+  border-radius: 30px
+  background-color: #e8e8e8
+  width: 100%
+  .title
+    margin-bottom: 25px
+  & .gradient-input
+    width: calc(33.33% - 20px)
+    height: 50px
+    border-radius: 50px
+    margin-bottom: 30px
+    position: relative
+    margin-right: 30px
+    &:nth-of-type(3)
+      margin-right: 0px
+    &::after
+      content: ''
+      position: absolute
+      top: -2px
+      bottom: -2px
+      left: -2px
+      right: -2px
+      background: #a0a0a0
+      border-radius: 34px
+      z-index: 0
+    &.isFocus::after
+      background: linear-gradient(35deg, #00a2ff, #7e00ff)
+    & input
+      border-radius: 50px
+      width: 100%
+      height: 100%
+      padding: 0px 20px
+      font-family: 'Open Sans', sans-serif
+      font-size: 13px
+      font-weight: 300
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.2
+      letter-spacing: normal
+      text-align: left
+      position: relative
+      z-index: 100
+      background: #e8e8e8
+  & .gradient-textarea
+    width: 100%
+    height: 115px
+    border-radius: 24.5px
+    margin-bottom: 30px
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: -2px
+      bottom: -2px
+      left: -2px
+      right: -2px
+      background: #a0a0a0
+      border-radius: 24.5px
+      z-index: 0
+    &.isFocus::after
+      background: linear-gradient(35deg, #00a2ff, #7e00ff)
+    & textarea
+      border-radius: 22.5px
+      resize: none
+      width: 100%
+      height: 100%
+      padding: 20px
+      font-family: 'Open Sans', sans-serif
+      font-size: 13px
+      font-weight: 300
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.2
+      letter-spacing: normal
+      text-align: left
+      position: relative
+      z-index: 100
+      background: #e8e8e8
+  & .form-btn
+    max-width: 330px
+    width: 100%
+
+.breadcrumb
+  max-width: 600px
+  flex-wrap: wrap
+  & .B_firstCrumb,
+  & .B_crumb
+    margin-right: 10px
+    a
+      font-size: 13px
+      font-weight: bold
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.38
+      letter-spacing: normal
+      text-align: left
+      color: #505050
+  & .breadcrumb-item.devider
+    margin-right: 3px
+    span
+      border: 5px solid transparent
+      border-left: 7px solid #00a2ff
+      display: inline-block
+  & .B_lastCrumb a,
+  & .B_currentCrumb
+      font-weight: bold
+      background: $blue
+      background: -webkit-gradient(linear, left top, right top, from($blue), to ($purple))
+      background: -webkit-linear-gradient(left,$blue 0%,$purple 100%)
+      background: -o-linear-gradient(left, $blue 0%, $purple 100%)
+      background: linear-gradient(to right, $blue 0%, $purple 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$blue, endColorstr=$purple, GradientType=1 )
+      display: inline-block
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      border-bottom: 1px solid transparent
+      border-image: linear-gradient(to right, $blue 0%, $purple 100%)
+      border-image-slice: 1
+.pagination
+  margin: 0 auto
+  & .pag-item
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: linear-gradient(to right, #00b4ff, #a664ff)
+    margin-right: 10px
+    position: relative
+    & .pag-bg
+      position: absolute
+      z-index: 0
+      right: -3px
+      bottom: -3px
+      width: 100%
+      height: 100%
+      border-radius: 50%
+      background: linear-gradient(to right, #00b4ff, #a664ff)
+      opacity: 0
+      &::before
+        content: ""
+        position: absolute
+        right: -3px
+        bottom: -3px
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        background: linear-gradient(to right, #00b4ff, #a664ff)
+        opacity: .3
+      &::after
+        content: ""
+        position: absolute
+        right: -6px
+        bottom: -6px
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        background: linear-gradient(to right, #00b4ff, #a664ff)
+        opacity: .15
+    & a
+      position: absolute
+      width: 95%
+      height: 95%
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      border-radius: 50%
+      background: #ffffff
+      z-index: 10
+      & span
+        font-size: 12px
+        font-weight: 900
+        font-stretch: normal
+        font-style: normal
+        line-height: 4
+        letter-spacing: normal
+        color: #191919
+    &:hover
+      a
+        background: transparent
+        & span
+          -webkit-text-fill-color: #fff
+    &.current
+      .pag-bg
+        opacity: .5
+      a
+        background: transparent
+        & span
+          -webkit-text-fill-color: #fff
+
+.hamburger
+  display: none
+  &.is-active
+    z-index: 9999
+    position: relative
+  
+#overlay
+  position: fixed
+  z-index: 150
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: rgba(0,0,0,.3)
+  opacity: 0
+  transition: opacity .2s ease-in-out
+
+#overlay.active
+  opacity: 1
+  transition: opacity .2s ease-in-out
+  display: block!important
+
+.banner-menu
+  &_item
+    position: absolute
+    &:nth-of-type(1)
+      bottom: -80px
+      right: 788px
+    &:nth-of-type(2)
+      bottom: 0
+      right: 690px
+    &:nth-of-type(3)
+      bottom: 38px
+      right: 577px
+    &:nth-of-type(4)
+      bottom: 8px
+      right: 440px
+    &:nth-of-type(5)
+      bottom: -17px
+      right: 266px
+    &:nth-of-type(6)
+      bottom: 79px
+      right: 80px
+      
+    & a
+      & span
+        font-size: 13px
+        color: rgb(0, 0, 0)
+        font-weight: bold
+        line-height: 1.385
+.banner-menu-sublist
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  padding: 30px
+  border-radius: 20px
   background: linear-gradient(to right, $blue 0%, $purple 100%)
-  box-shadow: 8.4px 10px 14.6px 1.4px rgba(0, 180, 255, 0.33)
-  padding: 7.5px
-  color: #ffffff
+  width: 300px
+  z-index: 20
+  display: none
+  & .menu-sublist-bg
+    position: absolute
+    width: 100%
+    height: 100%
+    border-radius: 20px
+    background: linear-gradient(to right, $blue 0%, $purple 100%)
+    opacity: .5
+    right: -7px
+    bottom: -7px
+    z-index: -1
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      border-radius: 20px
+      background: linear-gradient(to right, $blue 0%, $purple 100%)
+      opacity: .35
+      right: -7px
+      bottom: -7px
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      border-radius: 20px
+      background: linear-gradient(to right, $blue 0%, $purple 100%)
+      opacity: .15
+      right: -14px
+      bottom: -14px
+  & li
+    margin-bottom: 30px
+    &:last-of-type
+      margin-bottom: 0px
+    & a
+      font-size: 13px
+      color: rgb(255, 255, 255)
+      font-weight: bold
+      line-height: 1.385
+      text-align: left
+      &:hover
+        color: #000000

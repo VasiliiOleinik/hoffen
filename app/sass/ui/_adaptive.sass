@@ -1,16 +1,25 @@
 @media(max-width: 1550px) 
   .header
     background-size: cover
+  .banner-menu
+    display: none  
 @media(max-width: 1199px) 
   .main-left-nav
     left: -300px
     width: 230px
     padding: 15px
+    position: absolute
   .mobile-left-nav-btn
     display: flex
     left: 0
     top: -60px
     transition: all .2s ease-in-out
+    border-radius: 0px 50px 50px 0px
+    background: red
+    background: linear-gradient(to right, $blue 0%, $purple 100%)
+    box-shadow: 8.4px 10px 14.6px 1.4px rgba(0, 180, 255, 0.33)
+    padding: 7.5px
+    color: #ffffff
   .main-body
     margin-left: 0px
     width: 100%
@@ -56,6 +65,8 @@
     max-width: initial
   .main__reviews .review-item
     height: 240px
+  .header.simple-header
+    padding-bottom: 50px
 @media(max-width: 1099px) 
   .main__price-form-wrap .box
     flex-direction: column
@@ -72,6 +83,9 @@
     z-index: 150
     box-shadow: -7.1px 0px 14px 0px rgba(0, 0, 0, 0.15)
     right: -300px
+    transition: all .2s ease-in-out
+    &.active
+      right: 0
     & .header__nav-list
       flex-direction: column
   .header-schedule 
@@ -89,10 +103,10 @@
       margin-right: 0px
   .header__logo
     width: 100px
-    margin-right: 30px
+    margin-right: 10px
     flex-shrink: 0
   .header__mail
-    margin-right: 30px
+    margin-right: 10px
   .header__body
     justify-content: space-between
   .table
@@ -171,6 +185,8 @@
   .main__choose-inner
     order: -5
     margin-bottom: 30px
+  .hamburger
+    display: block
 @media(max-width: 900px)
   .gallery-item
     width: calc(50% - 15px)
@@ -189,6 +205,12 @@
     padding: 0px 15px
   .price-card
     margin: 0px 10px
+  .action-contacts
+    flex-direction: column-reverse
+    & img
+      margin-right: 0
+  .action-contacts-text .footer__data-info-item img
+    margin-right: 30px
 @media(max-width: 767px) 
   .header__mail
     display: none
@@ -212,9 +234,24 @@
     margin-bottom: 15px
   .main__welcome-services
     flex-direction: column
-@media(max-width: 600px)
+  .comment-form-wrapper .comment-form .gradient-input
+    width: 100%
+    margin-right: 0px
+  .comment-form
+    padding: 20px
+  .header.simple-header .link-btn-gradient
+    position: static
+    right: auto
+    order: 2
+    margin-bottom: 30px
+  .breadcrumb
+    order: 3
+  .product-image
+    max-width: 320px
+    width: 100%
   .header__contacts
     display: none
+@media(max-width: 600px)
   .header__body
     margin-bottom: 15px
   .main__price-form-wrap .form-bg,
@@ -261,6 +298,8 @@
     flex-direction: column
   .main__reviews .review-item_content
     width: 100%
+  .product-info
+    flex-direction: column
 @media(max-width: 450px) 
   .payment-item
     width: 100%
@@ -285,6 +324,8 @@
     margin-right: 0px !important
     &:nth-of-type(3n)
       margin-right: 0px !important
+  h1.title
+    font-size: 24px !important
 @media(max-width: 430px)
   .header__body
     flex-direction: column
@@ -304,4 +345,6 @@
     width: 100%
     height: 180px
   .news-wrapper .link-btn-outer
+    width: 100%
+  .main__choose-outer .choose-item_wrap
     width: 100%

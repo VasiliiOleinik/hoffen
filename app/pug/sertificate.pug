@@ -1,0 +1,132 @@
+extends blocks/_layout
+append content
+  main.main.main-content
+    .box.d-flex
+      nav.main-left-nav.d-flex.flex-column
+        p.left-nav-title.text-gradient.d-flex Подоконники
+        ul.left-nav-list.d-flex.flex-column
+          li 
+            a(href="") Подоконники Werzalit
+          li 
+            a(href="") Подоконники Danke
+          li 
+            a(href="") Подоконники ПВХ Россия
+          li 
+            a(href="") Подоконники из камня
+          li 
+            a(href="") Деревянные подоконники
+          li 
+            a(href="") Накладка на подоконник
+        p.left-nav-title.text-gradient.d-flex Столешницы
+        ul.left-nav-list.d-flex.flex-column
+          li 
+            a(href="") Столешницы из искусственного камня
+        p.left-nav-title.text-gradient.d-flex Отливы
+          ul.left-nav-list.d-flex.flex-column
+            li 
+              a(href="") Алюминиевые
+            li 
+              a(href="") Оцинкованные
+            li 
+              a(href="") Монтаж оконных отливов
+      .main-body.d-flex.flex-column
+        .mobile-left-nav-btn.d-flex.ai-center.justify-center Open menu
+        h2.title.text-gradient Сертификаты
+        section.sertificate.d-flex.flex-column
+          h3.title.text-gradient.d-flex.mr-auto Подоконники Moeller (Меллер)
+          .sertificate-block.d-flex
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+          h3.title.text-gradient.d-flex.mr-auto Подоконники Moeller (Меллер)
+          .sertificate-block.d-flex
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+            .sertificate-item
+              .sertificate-bg
+              .sertificate-item-hover.d-flex.ai-center.justify-center
+                a(href="" class="d-flex ai-center justify-center") Просмотр
+              .sertificate-item-content
+                img(src="img/sert-1.png" alt="")
+          ul.pagination.d-flex.ai-center
+            li.pag-item.prev
+              .pag-bg
+              a(href="/").d-flex.ai-center.justify-center <
+            li.pag-item.current
+              .pag-bg
+              a(href="/").d-flex.ai-center.justify-center 
+                span.text-gradient 1
+            li.pag-item
+              .pag-bg
+              a(href="/").d-flex.ai-center.justify-center 
+                span.text-gradient 2
+            li.pag-item
+              .pag-bg
+              a(href="/").d-flex.ai-center.justify-center 
+                span.text-gradient 3
+            li.pag-item.next
+              .pag-bg
+              a(href="/").d-flex.ai-center.justify-center >
+    .modal-form
+      .main__price-form-wrap
+        .main__price-form
+          form(action="" method="" class="price-form")
+            .form-bg
+            .form-content.d-flex.flex-column
+              p.text-gradient Оставьте Заявку
+              .gradient-input
+                input(type="text" name="DATA[NAME]" placeholder="Ваше имя")
+              .gradient-input
+                input(type="text" name="DATA[EMAIL]" placeholder="Ваш email")
+              .gradient-textarea
+                textarea(name="DATA[COMMENT]" placeholder="Сообщение")
+              button(type="submit" class="form-btn") Отправить

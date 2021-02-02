@@ -1,0 +1,89 @@
+.sertificate
+  & .title
+    margin-bottom: 25px
+    text-transform: uppercase
+  &-block
+    margin-bottom: 50px
+    padding-bottom: 30px
+    flex-wrap: nowrap
+    overflow-x: auto
+    max-width: 850px
+    -webkit-overflow-scrolling: touch
+    &::-webkit-scrollbar
+      width: 5px
+      height: 8px
+      background-color: transparent
+      cursor: pointer
+        /* ползунок скроллбара */
+    &::-webkit-scrollbar-thumb
+      border-radius: 2.5px
+      background-color: #a0a0a0
+      transition: all .2s ease-in-out
+      cursor: pointer
+    &::-webkit-scrollbar-thumb:hover
+      background-image: linear-gradient(to right, #2f66b9, #813ca4)
+      cursor: pointer
+  &-item
+    width: 195px
+    height: 195px
+    margin-right: 25px
+    flex: 0 0 auto
+    position: relative
+    cursor: pointer
+    &:last-child
+      margin-right: 0px
+    &-content
+      position: relative
+      z-index: 1
+    &-hover
+      position: absolute
+      border-radius: 10px
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 10
+      transition: opacity .2s ease-in-out
+      background-image: linear-gradient(to right,#00a2ff7a,#7e00ff75)
+      opacity: 0
+      a
+        width: 170px
+        height: 50px
+        color: #fff
+        border: 1px solid #fff
+        border-radius: 50px
+        &:hover
+          box-shadow: 0 0 10px 5px rgba(0,180,255,.33)
+    &:hover
+      .sertificate-item-hover
+        opacity: 1
+    & .sertificate-bg
+      position: absolute
+      z-index: 0
+      width: 100%
+      height: 100%
+      border-radius: 10px
+      background: linear-gradient(to right, $blue 0%, $purple 100%)
+      opacity: .5
+      right: -5px
+      bottom: -5px
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        border-radius: 10px
+        background: linear-gradient(to right, $blue 0%, $purple 100%)
+        opacity: .3
+        right: -5px
+        bottom: -5px
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        border-radius: 10px
+        background: linear-gradient(to right, $blue 0%, $purple 100%)
+        opacity: .15
+        right: -10px
+        bottom: -10px

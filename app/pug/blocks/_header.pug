@@ -30,7 +30,7 @@ header.header
         form(action="" type="POST")
           input(type="text" placeholder="Поиск")
           button(type="submit")
-            img(src="img/search.png", alt="")
+            img(src="img/search.png" alt="")
       .header__contacts.d-flex.flex-column
         .header__contacts-bg
         a(href="tel:84993981114") 8(499)398-11-14
@@ -42,7 +42,41 @@ header.header
           li.header__nav-li
             a.header__nav-link(href="#")!=item
     .header__content.d-flex.flex-column
-      h1.title.text-gradient Оконный сервис
-      p Вот уже более десятилетия московский оконный сервис «Hoffen» радует своих клиентов качественной продукцией 
-        |и высококлассным исполнением. Мы занимаемся изготовлением: подоконников, откосов, отливов, жалюзи, рольставен.
+      h1.title.text-gradient Оконный сервис.
+      p  Вот уже более десятилетия московский оконный сервис «Hoffen» радует своих клиентов качественной продукцией и высококлассным исполнением. Мы занимаемся изготовлением: подоконников, откосов, отливов, жалюзи, рольставен.
       a(href="#form" class="link-btn-gradient d-flex ai-center justify-center") Связаться с нами
+      ul.banner-menu
+        li.banner-menu_item
+          a(href="javascript:void(0);" class="d-flex flex-column ai-center") 
+            img(src="img/list-item-gradient.png", alt="")
+            span.text-gradient Подоконники
+          ul.banner-menu-sublist
+            .menu-sublist-bg
+            li
+              a(href="") Подоконник 1
+            li
+              a(href="") Подоконник 2
+            li
+              a(href="") Подоконник 3
+            li
+              a(href="") Подоконник 4
+        li.banner-menu_item
+          a(href="javascript:void(0);" class="d-flex flex-column ai-center") 
+            img(src="img/list-item-gradient.png", alt="")
+            span.text-gradient Столешницы
+        li.banner-menu_item
+          a(href="javascript:void(0);" class="d-flex flex-column ai-center") 
+            img(src="img/list-item-gradient.png", alt="")
+            span.text-gradient Отливы
+        li.banner-menu_item
+          a(href="javascript:void(0);" class="d-flex flex-column ai-center") 
+            img(src="img/list-item-gradient.png", alt="")
+            span.text-gradient Жалюзи
+        li.banner-menu_item
+          a(href="javascript:void(0);" class="d-flex flex-column ai-center") 
+            img(src="img/list-item-gradient.png", alt="")
+            span.text-gradient Ремонт окон
+        li.banner-menu_item
+          a(href="javascript:void(0);" class="d-flex flex-column ai-center") 
+            img(src="img/list-item-gradient.png", alt="")
+            span.text-gradient Другое

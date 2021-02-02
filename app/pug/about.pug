@@ -1,5 +1,48 @@
 extends blocks/_layout
 append content
-	main.main
-		.box
-			a(href="about.html") 
+	main.main.main-content
+		.box.d-flex
+			nav.main-left-nav.d-flex.flex-column
+				p.left-nav-title.text-gradient.d-flex Подоконники
+				ul.left-nav-list.d-flex.flex-column
+					li 
+						a(href="") Подоконники Werzalit
+					li 
+						a(href="") Подоконники Danke
+					li 
+						a(href="") Подоконники ПВХ Россия
+					li 
+						a(href="") Подоконники из камня
+					li 
+						a(href="") Деревянные подоконники
+					li 
+						a(href="") Накладка на подоконник
+				p.left-nav-title.text-gradient.d-flex Столешницы
+				ul.left-nav-list.d-flex.flex-column
+					li 
+						a(href="") Столешницы из искусственного камня
+				p.left-nav-title.text-gradient.d-flex Отливы
+					ul.left-nav-list.d-flex.flex-column
+						li 
+							a(href="") Алюминиевые
+						li 
+							a(href="") Оцинкованные
+						li 
+							a(href="") Монтаж оконных отливов
+			.main-body.d-flex.flex-column.w-100
+				.mobile-left-nav-btn.d-flex.ai-center.justify-center Open menu
+				h2.title.text-gradient Новосоти
+				section.text-section
+					.comment-form-wrapper
+						form(class="comment-form d-flex flex-column")
+							h3.title.text-gradient.d-flex.mr-auto Добавить комментарий
+							.w-100.d-flex.flex-wrap
+								.gradient-input
+									input(type="text" name="DATA[NAME]" placeholder="Ваше имя")
+								.gradient-input
+									input(type="text" name="DATA[EMAIL]" placeholder="E-mail")
+								.gradient-input
+									input(type="text" name="DATA[LOCATION]" placeholder="Ваш город")
+								.gradient-textarea
+									textarea(name="DATA[СOMMENT]" placeholder="Сообщение")
+								button(type="submit" class="form-btn d-flex mr-auto w-auto ai-center justify-center") Отправить

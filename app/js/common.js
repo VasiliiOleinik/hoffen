@@ -76,5 +76,16 @@ $(function () {
     // }
   });
 
-
+  $('.banner-menu_item').on('click', function() {
+    $(this).find('.banner-menu-sublist').addClass('active');
+    $(this).find('.banner-menu-sublist').fadeToggle();
+  });
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".banner-menu-sublist.active"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+      $(".banner-menu-sublist").removeClass('active');
+			div.fadeToggle(); // скрываем его
+		}
+	});
 });
